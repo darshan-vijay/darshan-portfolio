@@ -1,0 +1,401 @@
+{
+  "metadata": {
+    "title": "Darshan Vijayaraghavan - Software Engineer",
+    "description": "Master's student in Computer Science at University of Colorado Boulder with experience at Agilysys, Citicorp, and MathWorks. Passionate about full-stack development and cloud computing.",
+    "author": "Darshan Vijayaraghavan",
+    "version": "1.0.0"
+  },
+  "sections": {
+    "hero": {
+      "title": "Home",
+      "id": "home"
+    },
+    "about": {
+      "title": "About Me",
+      "id": "about"
+    },
+    "projects": {
+      "title": "My Projects",
+      "id": "projects"
+    },
+    "skills": {
+      "title": "Skills",
+      "id": "skills"
+    },
+    "experience": {
+      "title": "Work Experience",
+      "id": "experience"
+    },
+    "education": {
+      "title": "Education",
+      "id": "education"
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "id": "contact"
+    }
+  },
+  "navigation": {
+    "logo": "Darshan Vijayaraghavan",
+    "menuItems": [
+      {
+        "id": "home",
+        "label": "Home"
+      },
+      {
+        "id": "about",
+        "label": "About"
+      },
+      {
+        "id": "projects",
+        "label": "Projects"
+      },
+      {
+        "id": "skills",
+        "label": "Skills"
+      },
+      {
+        "id": "experience",
+        "label": "Experience"
+      },
+      {
+        "id": "education",
+        "label": "Education"
+      },
+      {
+        "id": "contact",
+        "label": "Contact"
+      }
+    ]
+  },
+  "hero": {
+    "name": "Darshan Vijayaraghavan",
+    "greeting": "Hello, I'm",
+    "waveEmoji": "👋",
+    "roles": [
+      "Software Engineer",
+      "Full Stack Developer", 
+      "Graduate Student",
+      "Cloud Computing Enthusiast"
+    ],
+    "description": "Master's student in Computer Science at University of Colorado Boulder with experience at Agilysys, Citicorp, and MathWorks. Passionate about full-stack development, DevOps, and cloud computing with AWS certification.",
+    "stats": [
+      {
+        "number": "3+",
+        "label": "Years Experience"
+      },
+      {
+        "number": "4.0",
+        "label": "GPA"
+      },
+      {
+        "number": "3",
+        "label": "Major Companies"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Get In Touch",
+        "icon": "→",
+        "action": "contact"
+      },
+      {
+        "text": "View Projects",
+        "icon": "↓",
+        "action": "projects"
+      }
+    ],
+    "card": {
+      "avatar": "👨‍💻",
+      "status": "Available for opportunities",
+      "techStack": ["React", "Node.js", "Angular", "Python", "AWS"]
+    },
+    "scrollIndicator": {
+      "text": "Scroll to explore"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "content": [
+      "Hi, I'm Darshan Vijayaraghavan, currently pursuing my Master's in Computer Science at University of Colorado Boulder with a perfect 4.0 GPA. I have over 3 years of professional experience working at leading companies like Agilysys, Citicorp, and MathWorks.",
+      "My expertise spans full-stack development, DevOps, and cloud computing. I've successfully migrated monolithic applications to micro frontend architecture, developed comprehensive dashboards, and built scalable cloud-native applications using modern technologies.",
+      "I'm passionate about creating efficient, scalable solutions and have earned recognition through awards like 'Citi Delivers with Pride Gold Award' and 'Succeed Together Bronze Award' for my contributions to improving system performance and user satisfaction."
+    ],
+    "stats": [
+      {
+        "number": "3",
+        "label": "Years Professional Experience"
+      },
+      {
+        "number": "1",
+        "label": "AWS Certification"
+      },
+      {
+        "number": "2+",
+        "label": "Major Projects Built"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together!",
+    "description": "I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!",
+    "details": [
+      {
+        "type": "email",
+        "label": "Email",
+        "value": "davi1493@colorado.edu",
+        "icon": "email"
+      },
+      {
+        "type": "phone",
+        "label": "Phone",
+        "value": "+1 (303) 641-0263",
+        "icon": "phone"
+      },
+      {
+        "type": "linkedin",
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/darshan-vijay",
+        "url": "https://linkedin.com/in/darshan-vijay",
+        "icon": "linkedin"
+      },
+      {
+        "type": "github",
+        "label": "GitHub",
+        "value": "github.com/darshan-vijay",
+        "url": "https://github.com/darshan-vijay",
+        "icon": "github"
+      }
+    ],
+    "form": {
+      "title": "Send me a message",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "message",
+          "label": "Message",
+          "type": "textarea",
+          "rows": 5,
+          "required": true
+        }
+      ],
+      "submitText": "Send Message"
+    }
+  },
+  "social": {
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/darshan-vijay",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/darshan-vijay",
+        "icon": "github"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Quiz Generator",
+      "description": "Developed a platform that scrapes web pages, generates quizzes using LLMs, and publishes them via Google Forms API. Features containerized deployment with CI/CD pipelines using GitHub Actions and Argo CD following GitOps principles.",
+      "technologies": ["React.js", "TypeScript", "RabbitMQ", "Kubernetes", "Argo CD", "GitHub Actions", "GitLab", "GKE"],
+      "image": "quiz",
+      "github": "https://github.com/darshan-vijay/Quiz_Generator",
+      "live": "#",
+      "category": "DevOps & AI"
+    },
+    {
+      "id": 2,
+      "title": "Study Group Manager",
+      "description": "Developed an application enabling students with similar interests to join study groups, build connections, and collaborate effectively. Features online/offline sessions, real-time group/private chats, and automated email notifications.",
+      "technologies": ["React.js", "Node.js", "NoSQL", "Redis", "RabbitMQ", "WebSocket", "Docker", "Kubernetes", "Terraform", "Google Cloud", "GKE"],
+      "image": "study",
+      "github": "https://github.com/darshan-vijay/Study-group-manager",
+      "live": "#",
+      "category": "Full-Stack & Cloud"
+    },
+    {
+      "id": 3,
+      "title": "Plant-Doc",
+      "description": "Built an intelligent plant disease detection system using computer vision and deep learning. The application analyzes plant images to identify diseases and provides treatment recommendations for farmers and gardeners.",
+      "technologies": ["Python", "TensorFlow", "OpenCV", "Flask", "CNN", "Image Processing"],
+      "image": "plant",
+      "github": "https://github.com/darshan-vijay/Plant-Doc",
+      "live": "#",
+      "category": "AI & Computer Vision"
+    },
+    {
+      "id": 4,
+      "title": "VQA Model",
+      "description": "Implemented a Visual Question Answering system that combines computer vision and natural language processing to answer questions about images. Uses deep learning models to understand visual content and generate accurate text responses.",
+      "technologies": ["Python", "PyTorch", "Transformers", "BERT", "ResNet", "NLP", "Computer Vision"],
+      "image": "ai",
+      "github": "https://github.com/darshan-vijay/VQA-Model",
+      "live": "#",
+      "category": "AI & ML"
+    },
+    {
+      "id": 5,
+      "title": "Wildfire Prediction",
+      "description": "Developed a machine learning model to predict wildfire occurrence and spread using weather data, geographical features, and historical fire patterns. Includes data visualization and risk assessment dashboards.",
+      "technologies": ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter"],
+      "image": "fire",
+      "github": "https://github.com/darshan-vijay/wildfire-prediction",
+      "live": "#",
+      "category": "Data Science & ML"
+    }
+  ],
+  "education": [
+    {
+      "year": "2024 – 2026",
+      "title": "Master's in Computer Science",
+      "institution": "University of Colorado Boulder, Boulder, CO",
+      "icon": "🎓",
+      "technologies": ["Data Center Scale Computing", "Software Engineering", "Natural Language Processing", "Neural Networks"],
+      "details": [
+        "GPA: 4.0/4.0",
+        "Relevant Courses: Data Center Scale Computing, Software Engineering, Natural Language Processing, Neural Networks"
+      ],
+      "achievements": ["Perfect GPA", "Graduate Student"]
+    },
+    {
+      "year": "2017 – 2021",
+      "title": "B.E. Electronics and Communication Engineering",
+      "institution": "College of Engineering Guindy, Anna University, Chennai, India",
+      "icon": "🎓",
+      "technologies": ["Data Structures", "OOPS", "Computer Architecture", "Operating Systems"],
+      "details": [
+        "GPA: 8.77/10",
+        "Relevant Courses: Data Structures & OOPS, Computer Architecture, Operating Systems"
+      ],
+      "achievements": ["High Academic Performance", "Strong Foundation"]
+    }
+  ],
+  "experience": [
+    {
+      "year": "May 2025 – Aug 2025",
+      "title": "Software Engineering Intern",
+      "institution": "Agilysys NV, LLC, Alpharetta, USA",
+      "icon": "💼",
+      "technologies": [".NET", "Angular", "SQL Server"],
+      "details": [
+        "Built full-stack admin dashboard for Loyalty and Promotions product",
+        "Designed SQL schemas and optimized stored procedures",
+        "Implemented secure REST APIs and responsive UI",
+        "Added features like interactive charts, personalization, role-based access control"
+      ],
+      "achievements": ["Full-Stack Development", "Enterprise Software"]
+    },
+    {
+      "year": "Jul 2023 – Aug 2024",
+      "title": "Application Developer 2",
+      "institution": "Citicorp Services India Private Limited, Chennai, India",
+      "icon": "🏦",
+      "technologies": ["Angular", "jQuery", "Nx", "CI/CD"],
+      "details": [
+        "Migrated monolithic Angular and jQuery apps to micro frontend architecture",
+        "Reduced build time by 95% and accelerated CI/CD processes",
+        "Developed reusable table component adopted across teams",
+        "Reduced development time by 80% with efficient components"
+      ],
+      "achievements": ["Architecture Migration", "Team Impact"]
+    },
+    {
+      "year": "Jul 2022 – Jul 2023",
+      "title": "Data Analyst",
+      "institution": "Citicorp Services India Private Limited, Chennai, India",
+      "icon": "📊",
+      "technologies": ["Power BI", "Excel", "ServiceNow"],
+      "details": [
+        "Developed comprehensive dashboard for global patching data",
+        "Maintained server patching above 97% for compliance",
+        "Created interactive dashboards from 70,000+ server incident reports",
+        "Reduced aging incidents by 17% and user escalations by 50%"
+      ],
+      "achievements": ["Citi Delivers with Pride Gold Award", "Succeed Together Bronze Award"]
+    },
+    {
+      "year": "Jul 2021 – Jul 2022",
+      "title": "Application Developer",
+      "institution": "Citicorp Services India Private Limited, Chennai, India",
+      "icon": "💻",
+      "technologies": ["Angular", "JWT", "OAuth 2.0"],
+      "details": [
+        "Collaborated with 10+ users and design teams to enhance usability",
+        "Improved user satisfaction by 30%",
+        "Achieved 100% cross-platform compatibility",
+        "Implemented JWT authorization and OAuth 2.0 compliance across 3 modules"
+      ],
+      "achievements": ["Security Implementation", "User Experience"]
+    },
+    {
+      "year": "May 2020 – Jul 2020",
+      "title": "Engineering Development Group Intern",
+      "institution": "MathWorks India Private Limited, Bangalore, India",
+      "icon": "🔧",
+      "technologies": ["MATLAB", "Simulink", "Wireshark", "Hercules", "Raspberry Pi"],
+      "details": [
+        "Developed TCP/IP and UDP test utilities for Simulink communication blocks",
+        "Verified host-to-target communication systems",
+        "Reduced unit test creation time by 40%",
+        "Used MATLAB, Simulink, Wireshark, and Raspberry Pi"
+      ],
+      "achievements": ["Test Automation", "Performance Improvement"]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Programming Languages & Databases",
+      "skills": [
+        { "name": "JavaScript", "icon": "https://skillicons.dev/icons?i=js" },
+        { "name": "TypeScript", "icon": "https://skillicons.dev/icons?i=ts" },
+        { "name": "C++", "icon": "https://skillicons.dev/icons?i=cpp" },
+        { "name": "C", "icon": "https://skillicons.dev/icons?i=c" },
+        { "name": "Java", "icon": "https://skillicons.dev/icons?i=java" },
+        { "name": "Python", "icon": "https://skillicons.dev/icons?i=python" },
+        { "name": "HTML5", "icon": "https://skillicons.dev/icons?i=html" },
+        { "name": "CSS3", "icon": "https://skillicons.dev/icons?i=css" },
+        { "name": "MySQL", "icon": "https://skillicons.dev/icons?i=mysql" },
+        { "name": "MongoDB", "icon": "https://skillicons.dev/icons?i=mongodb" },
+        { "name": "Redis", "icon": "https://skillicons.dev/icons?i=redis" }
+      ]
+    },
+    {
+      "category": "Full-Stack Tools & Frameworks",
+      "skills": [
+        { "name": "React", "icon": "https://skillicons.dev/icons?i=react" },
+        { "name": "Angular", "icon": "https://skillicons.dev/icons?i=angular" },
+        { "name": "Node.js", "icon": "https://skillicons.dev/icons?i=nodejs" },
+        { "name": "Express", "icon": "https://skillicons.dev/icons?i=express" },
+        { "name": "Figma", "icon": "https://skillicons.dev/icons?i=figma" },
+        { "name": "Bootstrap", "icon": "https://skillicons.dev/icons?i=bootstrap" }
+      ]
+    },
+    {
+      "category": "DevOps & Cloud Platforms",
+      "skills": [
+        { "name": "Docker", "icon": "https://skillicons.dev/icons?i=docker" },
+        { "name": "Kubernetes", "icon": "https://skillicons.dev/icons?i=kubernetes" },
+        { "name": "Terraform", "icon": "https://skillicons.dev/icons?i=terraform" },
+        { "name": "Jenkins", "icon": "https://skillicons.dev/icons?i=jenkins" },
+        { "name": "AWS", "icon": "https://skillicons.dev/icons?i=aws" },
+        { "name": "Google Cloud", "icon": "https://skillicons.dev/icons?i=gcp" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+.App {
+  min-height: 100vh;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
+  /* Improve touch scrolling */
+  -webkit-overflow-scrolling: touch;
+}
+
+main {
+  padding-top: 70px; /* Account for fixed header */
+  /* Ensure proper spacing on mobile */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 60px; /* Account for smaller mobile header */
+  }
+  
+  /* Improve touch targets and prevent zoom on input focus */
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Additional mobile optimizations */
+  .App {
+    font-size: 14px;
+  }
+}
