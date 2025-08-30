@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import SocialLinks from './SocialLinks';
 import '../styles/Contact.css';
 
@@ -9,6 +10,8 @@ const Contact = () => {
     message: ''
   });
   const [contactData, setContactData] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
 
   useEffect(() => {
     fetch('/src/data/portfolioData.json')
@@ -25,12 +28,34 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const result = await emailjs.send(
+        'service_5xf2rfu',
+        'template_9ou4pad',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          subject: `[PORTFOLIO] New message from ${formData.name}`,
+          to_name: 'Darshan Vijayaraghavan',
+        },
+        '4O35J-M4xAcLgDqIv'
+      );
+
+      console.log('SUCCESS!', result.status, result.text);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.log('FAILED...', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const getIconSvg = (iconType) => {
@@ -120,9 +145,25 @@ const Contact = () => {
               </div>
             ))}
             
-            <button type="submit" className="btn btn-primary">
-              {contactData.form.submitText}
+            <button 
+              type="submit" 
+              className="btn btn-primary"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : contactData.form.submitText}
             </button>
+            
+            {submitStatus === 'success' && (
+              <div className="success-message">
+                <p>Thank you! Your message has been sent successfully.</p>
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="error-message">
+                <p>Sorry, there was an error sending your message. Please try again.</p>
+              </div>
+            )}
           </form>
         </div>
       </div>

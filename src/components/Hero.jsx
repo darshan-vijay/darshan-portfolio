@@ -20,6 +20,8 @@ const Hero = () => {
       });
   }, []);
 
+
+
   useEffect(() => {
     if (texts.length === 0) return;
     
@@ -98,10 +100,21 @@ const Hero = () => {
                   <span className="btn-icon">{button.icon}</span>
                 </button>
               ))}
-            </div>
-            
-            <div className="hero-social-links">
-              <SocialLinks size="large" />
+              
+              {/* Download Resume Button */}
+              <button 
+                className="btn btn-secondary download-resume-btn"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Darshan_Vijayaraghavan_Resume.pdf';
+                  link.download = 'Darshan_Vijayaraghavan_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                <span>Download Resume</span>
+              </button>
             </div>
           </div>
           

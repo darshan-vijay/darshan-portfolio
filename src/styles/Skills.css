@@ -187,7 +187,7 @@
 }
 
 .skills-category-title {
-  color: var(--accent-primary);
+  color: var(--text-primary);
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 12px;

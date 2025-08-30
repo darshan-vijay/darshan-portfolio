@@ -27,12 +27,17 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   if (!navData) return null;
 
   return (
     <header className="header">
       <div className="header-container">
-        <div className="logo">
+        <div className="logo" onClick={scrollToTop}>
           <h2>{navData.logo}</h2>
         </div>
         

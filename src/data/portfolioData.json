@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Darshan Vijayaraghavan - Software Engineer",
-    "description": "Master's student in Computer Science at University of Colorado Boulder with experience at Agilysys, Citicorp, and MathWorks. Passionate about full-stack development and cloud computing.",
+    "description": "Currently expanding my CS knowledge at CU Boulder while drawing from years of building production-grade systems. I thrive at the intersection of full-stack development and cloud infrastructure, where complex problems become elegant solutions. I've discovered that the best engineering happens when solid fundamentals meet relentless curiosity about what's possible.",
     "author": "Darshan Vijayaraghavan",
     "version": "1.0.0"
   },
@@ -22,13 +22,9 @@
       "title": "Skills",
       "id": "skills"
     },
-    "experience": {
-      "title": "Work Experience",
-      "id": "experience"
-    },
-    "education": {
-      "title": "Education",
-      "id": "education"
+    "timeline": {
+      "title": "Experience & Education",
+      "id": "timeline"
     },
     "contact": {
       "title": "Get In Touch",
@@ -36,7 +32,7 @@
     }
   },
   "navigation": {
-    "logo": "Darshan Vijayaraghavan",
+    "logo": "DV",
     "menuItems": [
       {
         "id": "home",
@@ -55,12 +51,8 @@
         "label": "Skills"
       },
       {
-        "id": "experience",
-        "label": "Experience"
-      },
-      {
-        "id": "education",
-        "label": "Education"
+        "id": "timeline",
+        "label": "Timeline"
       },
       {
         "id": "contact",
@@ -73,12 +65,13 @@
     "greeting": "Hello, I'm",
     "waveEmoji": "👋",
     "roles": [
-      "Software Engineer",
-      "Full Stack Developer", 
-      "Graduate Student",
-      "Cloud Computing Enthusiast"
+      "Scalable Systems Architect",
+      "Cloud-Native Solutions Builder",
+      "AI Enthusiast",
+      "Software Developer & Researcher",
+      "Grad Student Solving Big Problems"
     ],
-    "description": "Master's student in Computer Science at University of Colorado Boulder with experience at Agilysys, Citicorp, and MathWorks. Passionate about full-stack development, DevOps, and cloud computing with AWS certification.",
+    "description": "Currently expanding my CS knowledge at CU Boulder while drawing from years of building production-grade systems. I thrive at the intersection of full-stack development and cloud infrastructure, where complex problems become elegant solutions. I've discovered that the best engineering happens when solid fundamentals meet relentless curiosity about what's possible.",
     "stats": [
       {
         "number": "3+",
@@ -117,23 +110,11 @@
   "about": {
     "title": "About Me",
     "content": [
-      "Hi, I'm Darshan Vijayaraghavan, currently pursuing my Master's in Computer Science at University of Colorado Boulder with a perfect 4.0 GPA. I have over 3 years of professional experience working at leading companies like Agilysys, Citicorp, and MathWorks.",
-      "My expertise spans full-stack development, DevOps, and cloud computing. I've successfully migrated monolithic applications to micro frontend architecture, developed comprehensive dashboards, and built scalable cloud-native applications using modern technologies.",
-      "I'm passionate about creating efficient, scalable solutions and have earned recognition through awards like 'Citi Delivers with Pride Gold Award' and 'Succeed Together Bronze Award' for my contributions to improving system performance and user satisfaction."
-    ],
-    "stats": [
-      {
-        "number": "3",
-        "label": "Years Professional Experience"
-      },
-      {
-        "number": "1",
-        "label": "AWS Certification"
-      },
-      {
-        "number": "2+",
-        "label": "Major Projects Built"
-      }
+      "My journey began in Electronics and Communication Engineering, but I was quickly drawn into Computer Science through the sheer joy of problem-solving. What started with frontend development soon expanded into backend systems, databases, system design, and eventually cloud computing. Each step revealed new layers of complexity and possibility.",
+      "Here's what drives me: I'm incredibly self-driven and constantly comparing systems, approaches, and solutions. I'm usually overloaded with questions like <em>'Why is this particular thing built this way?'</em> Turns out, that relentless curiosity is exactly the instinct you need for system design, so I guess I'm doing exactly what I was meant to do.",
+      "But I'm never done learning. Right now, I have my foot deep in AI, constantly exploring new technologies because learning different tech stacks gives me more tools to solve real-world problems. Every new framework, every new approach, every new paradigm expands what's possible. When I'm not coding, you'll find me traveling and drawing portraits, which, funny enough, connects right back to why I love frontend development. Both require the same eye for composition, balance, and making something beautiful that people want to look at.",
+      "Whether it's architecting a complex distributed system or crafting an intuitive user interface, I believe the best solutions emerge when technical excellence meets genuine curiosity about what's possible.",
+      "<strong> Ready to explore what we can build together?</strong>"
     ]
   },
   "contact": {
@@ -213,20 +194,20 @@
       "id": 1,
       "title": "Quiz Generator",
       "description": "Developed a platform that scrapes web pages, generates quizzes using LLMs, and publishes them via Google Forms API. Features containerized deployment with CI/CD pipelines using GitHub Actions and Argo CD following GitOps principles.",
-      "technologies": ["React.js", "TypeScript", "RabbitMQ", "Kubernetes", "Argo CD", "GitHub Actions", "GitLab", "GKE"],
+      "technologies": ["React.js", "RabbitMQ", "Kubernetes", "Argo CD", "GitHub Actions", "GitLab", "GKE"],
       "image": "quiz",
       "github": "https://github.com/darshan-vijay/Quiz_Generator",
-      "live": "#",
+      "live": "https://www.loom.com/share/2025fb5d8bea46679c4feb12bd315b54?sid=33404057-0173-4d53-a53e-4dd19e6a966e",
       "category": "DevOps & AI"
     },
     {
       "id": 2,
       "title": "Study Group Manager",
       "description": "Developed an application enabling students with similar interests to join study groups, build connections, and collaborate effectively. Features online/offline sessions, real-time group/private chats, and automated email notifications.",
-      "technologies": ["React.js", "Node.js", "NoSQL", "Redis", "RabbitMQ", "WebSocket", "Docker", "Kubernetes", "Terraform", "Google Cloud", "GKE"],
+      "technologies": ["React.js", "Node.js", "NoSQL", "Redis", "RabbitMQ", "WebSocket", "Docker", "Kubernetes", "Terraform"],
       "image": "study",
       "github": "https://github.com/darshan-vijay/Study-group-manager",
-      "live": "#",
+      "live": "https://youtu.be/hWxHUJqYAns?feature=shared",
       "category": "Full-Stack & Cloud"
     },
     {
@@ -236,7 +217,7 @@
       "technologies": ["Python", "TensorFlow", "OpenCV", "Flask", "CNN", "Image Processing"],
       "image": "plant",
       "github": "https://github.com/darshan-vijay/Plant-Doc",
-      "live": "#",
+      "live": "https://youtu.be/2WJns_VitCA?feature=shared",
       "category": "AI & Computer Vision"
     },
     {
@@ -262,11 +243,12 @@
   ],
   "education": [
     {
-      "year": "2024 – 2026",
+      "year": "Aug 2024 - May2026",
       "title": "Master's in Computer Science",
-      "institution": "University of Colorado Boulder, Boulder, CO",
+      "company": "University of Colorado Boulder",
+      "location": "Boulder, CO",
       "icon": "🎓",
-      "technologies": ["Data Center Scale Computing", "Software Engineering", "Natural Language Processing", "Neural Networks"],
+      "technologies": ["Cloud Computing", "Artificial Intelligence"],
       "details": [
         "GPA: 4.0/4.0",
         "Relevant Courses: Data Center Scale Computing, Software Engineering, Natural Language Processing, Neural Networks"
@@ -274,11 +256,12 @@
       "achievements": ["Perfect GPA", "Graduate Student"]
     },
     {
-      "year": "2017 – 2021",
+      "year": "Jul 2017 - Apr 2021",
       "title": "B.E. Electronics and Communication Engineering",
-      "institution": "College of Engineering Guindy, Anna University, Chennai, India",
+      "company": "College of Engineering Guindy, Anna University",
+      "location": "Chennai, India",
       "icon": "🎓",
-      "technologies": ["Data Structures", "OOPS", "Computer Architecture", "Operating Systems"],
+      "technologies": ["Web Development", "Data Structures"],
       "details": [
         "GPA: 8.77/10",
         "Relevant Courses: Data Structures & OOPS, Computer Architecture, Operating Systems"
@@ -288,9 +271,10 @@
   ],
   "experience": [
     {
-      "year": "May 2025 – Aug 2025",
+      "year": "May 2025 - Aug 2025",
       "title": "Software Engineering Intern",
-      "institution": "Agilysys NV, LLC, Alpharetta, USA",
+      "company": "Agilysys NV, LLC",
+      "location": "Alpharetta, USA",
       "icon": "💼",
       "technologies": [".NET", "Angular", "SQL Server"],
       "details": [
@@ -302,9 +286,10 @@
       "achievements": ["Full-Stack Development", "Enterprise Software"]
     },
     {
-      "year": "Jul 2023 – Aug 2024",
+      "year": "Jul 2023 - Aug 2024",
       "title": "Application Developer 2",
-      "institution": "Citicorp Services India Private Limited, Chennai, India",
+      "company": "Citicorp Services India Private Limited",
+      "location": "Chennai, India",
       "icon": "🏦",
       "technologies": ["Angular", "jQuery", "Nx", "CI/CD"],
       "details": [
@@ -316,9 +301,10 @@
       "achievements": ["Architecture Migration", "Team Impact"]
     },
     {
-      "year": "Jul 2022 – Jul 2023",
+      "year": "Jul 2022 - Jul 2023",
       "title": "Data Analyst",
-      "institution": "Citicorp Services India Private Limited, Chennai, India",
+      "company": "Citicorp Services India Private Limited",
+      "location": "Chennai, India",
       "icon": "📊",
       "technologies": ["Power BI", "Excel", "ServiceNow"],
       "details": [
@@ -330,9 +316,10 @@
       "achievements": ["Citi Delivers with Pride Gold Award", "Succeed Together Bronze Award"]
     },
     {
-      "year": "Jul 2021 – Jul 2022",
+      "year": "Jul 2021 - Jul 2022",
       "title": "Application Developer",
-      "institution": "Citicorp Services India Private Limited, Chennai, India",
+      "company": "Citicorp Services India Private Limited",
+      "location": "Chennai, India",
       "icon": "💻",
       "technologies": ["Angular", "JWT", "OAuth 2.0"],
       "details": [
@@ -344,11 +331,12 @@
       "achievements": ["Security Implementation", "User Experience"]
     },
     {
-      "year": "May 2020 – Jul 2020",
+      "year": "May 2020 - Jul 2020",
       "title": "Engineering Development Group Intern",
-      "institution": "MathWorks India Private Limited, Bangalore, India",
+      "company": "MathWorks India Private Limited",
+      "location": "Bangalore, India",
       "icon": "🔧",
-      "technologies": ["MATLAB", "Simulink", "Wireshark", "Hercules", "Raspberry Pi"],
+      "technologies": ["MATLAB", "Simulink", "Wireshark", "Hercules"],
       "details": [
         "Developed TCP/IP and UDP test utilities for Simulink communication blocks",
         "Verified host-to-target communication systems",
