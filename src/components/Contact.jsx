@@ -58,6 +58,29 @@ const Contact = () => {
     }
   };
 
+  const handleEmailClick = (email) => {
+    // Open email client
+    window.open(`mailto:${email}`, '_blank');
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(email).then(() => {
+      // You could add a toast notification here
+      console.log('Email copied to clipboard');
+    }).catch(err => {
+      console.error('Failed to copy email: ', err);
+    });
+  };
+
+  const handlePhoneClick = (phone) => {
+    // Copy to clipboard
+    navigator.clipboard.writeText(phone).then(() => {
+      // You could add a toast notification here
+      console.log('Phone number copied to clipboard');
+    }).catch(err => {
+      console.error('Failed to copy phone number: ', err);
+    });
+  };
+
   const getIconSvg = (iconType) => {
     switch (iconType) {
       case 'email':
@@ -108,7 +131,27 @@ const Contact = () => {
                   </span>
                   <div>
                     <h4>{detail.label}</h4>
-                    {detail.url ? (
+                    {detail.icon === 'email' ? (
+                      <p>
+                        <button 
+                          className="contact-link"
+                          onClick={() => handleEmailClick(detail.value)}
+                          title="Click to open email client and copy email"
+                        >
+                          {detail.value}
+                        </button>
+                      </p>
+                    ) : detail.icon === 'phone' ? (
+                      <p>
+                        <button 
+                          className="contact-link"
+                          onClick={() => handlePhoneClick(detail.value)}
+                          title="Click to copy phone number"
+                        >
+                          {detail.value}
+                        </button>
+                      </p>
+                    ) : detail.url ? (
                       <p><a href={detail.url} target="_blank" rel="noopener noreferrer">{detail.value}</a></p>
                     ) : (
                       <p>{detail.value}</p>

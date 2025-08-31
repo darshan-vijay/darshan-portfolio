@@ -40,31 +40,7 @@
   transform: scale(1.2) rotate(5deg);
 }
 
-/* Resume download button specific styles */
-.resume-download {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: all var(--transition-normal);
-  animation: fadeInUp 0.6s ease forwards;
-  animation-delay: var(--delay);
-  opacity: 0;
-  transform: translateY(20px);
-}
 
-.resume-download:hover {
-  color: var(--text-primary);
-  transform: translateY(-3px) scale(1.15);
-  background: var(--bg-secondary);
-  box-shadow: 0 8px 25px var(--shadow-medium);
-}
-
-.resume-download:hover .social-icon {
-  transform: scale(1.2) rotate(5deg);
-}
 
 /* Size variants */
 .social-links-small .social-icon {
@@ -96,6 +72,7 @@
 @media (max-width: 768px) {
   .social-links {
     gap: 0.75rem;
+    justify-content: center;
   }
   
   .social-link {
@@ -118,6 +95,7 @@
 @media (max-width: 480px) {
   .social-links {
     gap: 0.5rem;
+    justify-content: center;
   }
   
   .social-link {

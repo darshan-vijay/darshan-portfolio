@@ -47,93 +47,81 @@
   text-align: center;
 }
 
-.back-to-top-fab {
+/* Back to Top Button Styles */
+.back-to-top-button {
   position: fixed;
-  right: 2.2rem;
-  bottom: 2.2rem;
-  z-index: 1000;
+  bottom: 2rem;
+  right: 2rem;
   width: 56px;
   height: 56px;
   border-radius: 50%;
   background: var(--accent-primary, #6c63ff);
-  color: #fff;
+  color: white;
   border: none;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
-  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-  outline: none;
-  overflow: visible;
-}
-
-.back-to-top-fab:hover, .back-to-top-fab:focus {
-  background: var(--accent-secondary, #4834d4);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
-  transform: scale(1.08) translateY(-2px);
-}
-
-.back-to-top-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  margin-bottom: 0.1rem;
-  transition: transform 0.18s cubic-bezier(.4,2,.6,1);
-}
-
-.back-to-top-fab:hover .back-to-top-icon,
-.back-to-top-fab:focus .back-to-top-icon {
-  transform: translateY(-4px) scale(1.12);
-}
-
-.back-to-top-label {
-  display: block;
-  font-size: 0.98rem;
-  font-weight: 500;
-  margin-top: 0.1rem;
-  color: #fff;
-  background: rgba(40,36,60,0.98);
-  border-radius: 8px;
-  padding: 0.18em 0.7em;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1000;
   opacity: 0;
-  pointer-events: none;
-  transform: translateY(8px);
-  transition: opacity 0.18s, transform 0.18s;
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  white-space: nowrap;
-  translate: -50% 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.3s ease forwards;
 }
 
-.back-to-top-fab:hover .back-to-top-label,
-.back-to-top-fab:focus .back-to-top-label {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(18px);
+.back-to-top-button:hover {
+  background: var(--accent-secondary, #4834d4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 600px) {
-  .back-to-top-fab {
-    width: 42px;
-    height: 42px;
-    font-size: 0.98rem;
-    right: 1.1rem;
-    bottom: 1.1rem;
+.back-to-top-button:active {
+  transform: translateY(0);
+}
+
+.back-to-top-button svg {
+  transition: transform 0.2s ease;
+}
+
+.back-to-top-button:hover svg {
+  transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .back-to-top-icon svg {
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .back-to-top-button {
+    width: 50px;
+    height: 50px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .back-to-top-button svg {
     width: 20px;
     height: 20px;
   }
-  .back-to-top-label {
-    font-size: 0.85rem;
-    padding: 0.12em 0.5em;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .back-to-top-button {
+    width: 48px;
+    height: 48px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  .back-to-top-button svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -373,9 +361,26 @@
   }
   
   .back-to-top-fab {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     font-size: 1.1rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+  
+  .scroll-progress-fab {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    font-size: 1.1rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+  
+  .scroll-progress-svg {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -390,9 +395,26 @@
   }
   
   .back-to-top-fab {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  
+  .scroll-progress-fab {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  
+  .scroll-progress-svg {
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -493,9 +515,9 @@
     height: 48px;
     min-width: 48px;
     min-height: 48px;
-    font-size: 0.98rem;
-    right: 0.8rem;
-    bottom: 0.8rem;
+    font-size: 1rem;
+    right: 1rem;
+    bottom: 1rem;
     border-radius: 50%;
     padding: 0;
   }

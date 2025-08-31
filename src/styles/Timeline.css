@@ -590,11 +590,11 @@
     min-height: 300px;
   }
   
-  .timeline-card-content:hover {
-    height: auto;
-    min-height: 250px;
-    max-height: 500px;
-  }
+
+  
+
+  
+
   
   .timeline-icon-placeholder {
     width: 70px;
@@ -651,11 +651,7 @@
     min-height: 280px;
   }
   
-  .timeline-card-content:hover {
-    height: auto;
-    min-height: 200px;
-    max-height: 400px;
-  }
+  
   
   .timeline-connector {
     display: none;

@@ -42,6 +42,7 @@ const SocialLinks = ({ className = '', size = 'medium' }) => {
         return (
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20Z"/>
+            <path d="M12 18V12M9 15H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
           </svg>
         );
       default:
@@ -57,10 +58,11 @@ const SocialLinks = ({ className = '', size = 'medium' }) => {
         <a
           key={link.name}
           href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={link.download ? "_self" : "_blank"}
+          rel={link.download ? "" : "noopener noreferrer"}
           className="social-link"
           aria-label={link.name}
+          download={link.download ? "Darshan_Vijayaraghavan_Resume.pdf" : undefined}
           style={{
             '--delay': `${index * 0.1}s`
           }}
@@ -70,30 +72,6 @@ const SocialLinks = ({ className = '', size = 'medium' }) => {
           </div>
         </a>
       ))}
-      
-      {/* Download Resume Button */}
-      <button
-        className="social-link resume-download"
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        data-bs-title="Download Resume"
-        aria-label="Download Resume"
-        onClick={() => {
-          const link = document.createElement('a');
-          link.href = '/Darshan_Vijayaraghavan_Resume.pdf';
-          link.download = 'Darshan_Vijayaraghavan_Resume.pdf';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        }}
-        style={{
-          '--delay': `${socialData.links.length * 0.1}s`
-        }}
-      >
-        <div className="social-icon">
-          {getIconSvg('resume')}
-        </div>
-      </button>
     </div>
   );
 };

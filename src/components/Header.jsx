@@ -53,9 +53,7 @@ const Header = () => {
             <li className="social-links-container">
               <SocialLinks size="medium" />
             </li>
-            <li className="theme-toggle-container">
-              <ThemeToggle />
-            </li>
+
           </ul>
         </nav>
 

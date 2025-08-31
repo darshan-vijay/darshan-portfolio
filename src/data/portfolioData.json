@@ -186,6 +186,12 @@
         "name": "GitHub",
         "url": "https://github.com/darshan-vijay",
         "icon": "github"
+      },
+      {
+        "name": "Download Resume",
+        "url": "/Darshan_Vijayaraghavan_Resume.pdf",
+        "icon": "resume",
+        "download": true
       }
     ]
   },

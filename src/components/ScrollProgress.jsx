@@ -1,67 +1,55 @@
 import { useState, useEffect } from 'react';
 import '../styles/ScrollProgress.css';
 
-const SIZE = 56;
-const STROKE = 5;
-const RADIUS = (SIZE - STROKE) / 2;
-const CIRCUM = 2 * Math.PI * RADIUS;
-
-const ScrollProgress = () => {
-  const [scrollProgress, setScrollProgress] = useState(0);
+const BackToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const updateScrollProgress = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      setScrollProgress(scrollPercent);
+    const toggleVisibility = () => {
+      // Show button when user scrolls down 300px
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
-    window.addEventListener('scroll', updateScrollProgress);
-    updateScrollProgress();
-    return () => window.removeEventListener('scroll', updateScrollProgress);
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
-  const offset = CIRCUM - (scrollProgress / 100) * CIRCUM;
-
   return (
-    <button
-      className="scroll-progress-fab popout"
-      onClick={handleClick}
-      aria-label="Back to top"
-      title="Back to top"
-      style={{ width: SIZE, height: SIZE }}
-    >
-      <svg
-        className="scroll-progress-svg"
-        width={SIZE}
-        height={SIZE}
-      >
-        <circle
-          className="scroll-progress-bg"
-          cx={SIZE / 2}
-          cy={SIZE / 2}
-          r={RADIUS}
-          strokeWidth={STROKE}
-          fill="none"
-        />
-        <circle
-          className="scroll-progress-ring"
-          cx={SIZE / 2}
-          cy={SIZE / 2}
-          r={RADIUS}
-          strokeWidth={STROKE}
-          fill="none"
-          strokeDasharray={CIRCUM}
-          strokeDashoffset={offset}
-        />
-      </svg>
-      <span className="scroll-progress-percent">{Math.round(scrollProgress)}%</span>
-    </button>
+    <>
+      {isVisible && (
+        <button
+          className="back-to-top-button"
+          onClick={scrollToTop}
+          aria-label="Back to top"
+          title="Back to top"
+        >
+          <svg 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              d="M12 4L4 12H9V20H15V12H20L12 4Z" 
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      )}
+    </>
   );
 };
 
-export default ScrollProgress; 
+export default BackToTop; 

@@ -3,6 +3,10 @@
   background: var(--bg-primary);
 }
 
+.projects-modern {
+  padding: 24px 2rem 12px 2rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -249,7 +253,7 @@
 .project-card-modern {
   background: var(--modern-card-bg);
   border-radius: 16px;
-  padding: 24px;
+  padding: 24px 44px;
   box-shadow: 0 1px 6px var(--modern-shadow);
   transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s, border-color 0.18s, background 0.18s;
   cursor: pointer;
@@ -421,6 +425,9 @@
 
 /* Responsive Design */
 @media (max-width: 900px) {
+  .projects-modern {
+    padding: 24px 1.5rem 12px 1.5rem;
+  }
   .projects-modern .container {
     padding: 0 4px;
   }
@@ -428,7 +435,7 @@
     gap: 16px;
   }
   .project-card-modern {
-    padding: 20px;
+    padding: 20px 40px;
   }
   .project-title-modern {
     font-size: 1.2rem;
@@ -437,7 +444,7 @@
 
 @media (max-width: 600px) {
   .projects-modern {
-    padding: 24px 0 12px 0;
+    padding: 24px 1rem 12px 1rem;
   }
   .projects-modern .section-title {
     font-size: 1.3rem;
@@ -448,7 +455,7 @@
     gap: 12px;
   }
   .project-card-modern {
-    padding: 16px;
+    padding: 16px 36px;
   }
   .project-title-modern {
     font-size: 1.1rem;
