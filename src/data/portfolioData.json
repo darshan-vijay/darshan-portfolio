@@ -354,7 +354,7 @@
         { "name": "TypeScript", "icon": "https://skillicons.dev/icons?i=ts" },
         { "name": "C++", "icon": "https://skillicons.dev/icons?i=cpp" },
         { "name": "C", "icon": "https://skillicons.dev/icons?i=c" },
-        { "name": "C#", "icon": "https://skillicons.dev/icons?i=cs" },
+        { "name": "C#", "icon": "https://skillicons.dev/icons?i=csharp" },
         { "name": "Java", "icon": "https://skillicons.dev/icons?i=java" },
         { "name": "Python", "icon": "https://skillicons.dev/icons?i=python" },
         { "name": "HTML5", "icon": "https://skillicons.dev/icons?i=html" },
@@ -371,7 +371,7 @@
         { "name": "Angular", "icon": "https://skillicons.dev/icons?i=angular" },
         { "name": "Node.js", "icon": "https://skillicons.dev/icons?i=nodejs" },
         { "name": "Express", "icon": "https://skillicons.dev/icons?i=express" },
-        { "name": ".NET", "icon": "https://skillicons.dev/icons?i=dotnet" },
+        { "name": ".NET", "icon": "https://skillicons.dev/icons?i=dotnet,cs" },
         { "name": "Figma", "icon": "https://skillicons.dev/icons?i=figma" },
         { "name": "Bootstrap", "icon": "https://skillicons.dev/icons?i=bootstrap" }
       ]
