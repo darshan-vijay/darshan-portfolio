@@ -7,7 +7,7 @@ const Skills = () => {
   const gridRefs = useRef([]);
 
   useEffect(() => {
-    fetch('/src/data/portfolioData.json')
+    fetch('/portfolioData.json')
       .then((res) => res.json())
       .then((data) => {
         setCategories(data.skills || []);

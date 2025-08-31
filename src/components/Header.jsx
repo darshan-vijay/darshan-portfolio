@@ -8,7 +8,7 @@ const Header = () => {
   const [navData, setNavData] = useState(null);
 
   useEffect(() => {
-    fetch('/src/data/portfolioData.json')
+    fetch('/portfolioData.json')
       .then((res) => res.json())
       .then((data) => {
         setNavData(data.navigation);

@@ -7,7 +7,7 @@ const Projects = () => {
   const cardsRef = useRef([]);
 
   useEffect(() => {
-    fetch('/src/data/portfolioData.json')
+    fetch('/portfolioData.json')
       .then((res) => res.json())
       .then((data) => {
         setProjects(data.projects);

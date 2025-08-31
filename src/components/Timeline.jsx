@@ -8,7 +8,7 @@ const Timeline = () => {
   const [sectionTitle, setSectionTitle] = useState('');
 
   useEffect(() => {
-    fetch('/src/data/portfolioData.json')
+    fetch('/portfolioData.json')
       .then((res) => res.json())
       .then((data) => {
         // Combine education and experience data
@@ -40,13 +40,13 @@ const Timeline = () => {
     // Map company names to logo files
     const logoMap = {
       // Education
-      'University of Colorado Boulder': '/src/assets/citi-logo.jpg Agilysys-Logo.png CEG_logo.png CU-logo.png Matlab_Logo.png/CU-logo.png',
-      'College of Engineering Guindy, Anna University': '/src/assets/citi-logo.jpg Agilysys-Logo.png CEG_logo.png CU-logo.png Matlab_Logo.png/CEG-logo.png',
+      'University of Colorado Boulder': '/CU-logo.png',
+      'College of Engineering Guindy, Anna University': '/CEG-logo.png',
       
       // Experience
-      'Agilysys NV, LLC': '/src/assets/citi-logo.jpg Agilysys-Logo.png CEG_logo.png CU-logo.png Matlab_Logo.png/Agilysys-logo.png',
-      'Citicorp Services India Private Limited': '/src/assets/citi-logo.jpg Agilysys-Logo.png CEG_logo.png CU-logo.png Matlab_Logo.png/Citi-logo.png',
-      'MathWorks India Private Limited': '/src/assets/citi-logo.jpg Agilysys-Logo.png CEG_logo.png CU-logo.png Matlab_Logo.png/Matlab-logo.png'
+      'Agilysys NV, LLC': '/Agilysys-logo.png',
+      'Citicorp Services India Private Limited': '/Citi-logo.png',
+      'MathWorks India Private Limited': '/Matlab-logo.png'
     };
     
     return logoMap[company] || null;
