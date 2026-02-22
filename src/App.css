@@ -7,14 +7,21 @@
 }
 
 main {
-  padding-top: 70px; /* Account for fixed header */
-  /* Ensure proper spacing on mobile */
+  padding-top: 0;
+  padding-left: 90px; /* Nav pill (72px) + margin + minimal gap */
   width: 100%;
+}
+
+@media (max-width: 1000px) {
+  main {
+    padding-left: 0;
+    padding-top: 70px; /* Account for horizontal header on mobile */
+  }
 }
 
 @media (max-width: 768px) {
   main {
-    padding-top: 60px; /* Account for smaller mobile header */
+    padding-top: 60px;
   }
   
   /* Improve touch targets and prevent zoom on input focus */

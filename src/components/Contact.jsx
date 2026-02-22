@@ -190,7 +190,7 @@ const Contact = () => {
             
             <button 
               type="submit" 
-              className="btn btn-primary"
+              className="contact-submit-btn"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : contactData.form.submitText}

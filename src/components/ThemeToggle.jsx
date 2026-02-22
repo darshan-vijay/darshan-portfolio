@@ -1,4 +1,5 @@
 import { useTheme } from '../context/ThemeContext';
+import { LuSun, LuMoon } from 'react-icons/lu';
 import '../styles/ThemeToggle.css';
 
 const ThemeToggle = () => {
@@ -6,19 +7,11 @@ const ThemeToggle = () => {
 
   return (
     <button 
-      className="theme-toggle" 
+      className="theme-toggle-btn" 
       onClick={toggleTheme}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
     >
-      <div className="toggle-track">
-        <div className="toggle-thumb">
-          {isDark ? (
-            <span className="moon-icon">🌙</span>
-          ) : (
-            <span className="sun-icon">☀️</span>
-          )}
-        </div>
-      </div>
+      {isDark ? <LuSun className="theme-toggle-icon" size={26} /> : <LuMoon className="theme-toggle-icon" size={26} />}
     </button>
   );
 };

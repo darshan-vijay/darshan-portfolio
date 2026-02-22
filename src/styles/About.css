@@ -1,40 +1,52 @@
 .about {
   padding: 5rem 0;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
 }
 
-.container {
+.about .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.section-title {
+.about .section-title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--accent-primary);
+  color: var(--text-primary);
 }
 
 .about-content {
-  display: block;
   margin-top: 1rem;
 }
 
+.about-text {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
 .about-text p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   color: var(--text-secondary);
   text-align: justify;
 }
 
-
+.about-text p:last-child {
+  margin-bottom: 0;
+}
 
 @media (max-width: 768px) {
   .about {
     padding: 3rem 0;
+  }
+  
+  .about-text {
+    padding: 1.5rem;
   }
   
   .about-text p {
@@ -47,4 +59,4 @@
   .about {
     padding: 2rem 0;
   }
-} 
+}

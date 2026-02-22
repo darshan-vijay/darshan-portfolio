@@ -1,106 +1,47 @@
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.1);
-}
-
-.theme-toggle:active {
-  transform: scale(0.95);
-}
-
-.toggle-track {
-  width: 50px;
-  height: 26px;
-  background: var(--toggle-bg);
-  border-radius: 13px;
-  position: relative;
-  transition: background-color 0.3s ease;
-  border: 2px solid var(--toggle-border);
-}
-
-.toggle-thumb {
-  width: 20px;
-  height: 20px;
-  background: var(--toggle-thumb-bg);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Dark theme - move thumb to the right */
-[data-theme="dark"] .toggle-thumb {
-  transform: translateX(24px);
+.theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--accent-primary);
 }
 
-.sun-icon, .moon-icon {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+[data-theme="dark"] .theme-toggle-btn {
+  background: rgba(39, 39, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.theme-toggle:hover .sun-icon,
-.theme-toggle:hover .moon-icon {
-  opacity: 1;
+[data-theme="dark"] .theme-toggle-btn:hover {
+  background: rgba(63, 63, 70, 0.8);
 }
 
-/* Mobile responsive styles */
-@media (max-width: 768px) {
-  .theme-toggle {
-    min-width: 44px;
-    min-height: 44px;
-  }
-  
-  .toggle-track {
-    width: 45px;
-    height: 24px;
-  }
-  
-  .toggle-thumb {
-    width: 18px;
-    height: 18px;
-    font-size: 11px;
-  }
-  
-  /* Dark theme - move thumb to the right */
-  [data-theme="dark"] .toggle-thumb {
-    transform: translateX(21px);
-  }
+.theme-toggle-btn:hover .theme-toggle-icon {
+  animation: icon-spin 0.5s ease;
 }
 
-@media (max-width: 480px) {
-  .theme-toggle {
-    min-width: 40px;
-    min-height: 40px;
+.theme-toggle-icon {
+  display: block;
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .toggle-track {
-    width: 40px;
-    height: 22px;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .toggle-thumb {
-    width: 16px;
-    height: 16px;
-    font-size: 10px;
-  }
-  
-  /* Dark theme - move thumb to the right */
-  [data-theme="dark"] .toggle-thumb {
-    transform: translateX(18px);
-  }
-} 
+}

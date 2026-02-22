@@ -314,8 +314,25 @@
   font-weight: 500;
 }
 
-/* Disabled button state */
-.btn:disabled {
+/* Minimal Send Message button */
+.contact-submit-btn {
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid var(--modern-border);
+  border-radius: 8px;
+  color: var(--modern-text-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.contact-submit-btn:hover:not(:disabled) {
+  border-color: var(--modern-accent);
+  color: var(--modern-accent);
+}
+
+.contact-submit-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }

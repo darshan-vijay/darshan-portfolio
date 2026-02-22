@@ -73,21 +73,18 @@ const Timeline = () => {
             className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`}
             onClick={() => setActiveFilter('all')}
           >
-            <span className="filter-icon"></span>
             All
           </button>
           <button
             className={`filter-btn ${activeFilter === 'experience' ? 'active' : ''}`}
             onClick={() => setActiveFilter('experience')}
-            >
-            <span className="filter-icon"></span>
+          >
             Experience
           </button>
           <button
             className={`filter-btn ${activeFilter === 'education' ? 'active' : ''}`}
             onClick={() => setActiveFilter('education')}
           >
-            <span className="filter-icon"></span>
             Education
           </button>
         </div>
@@ -110,24 +107,22 @@ const Timeline = () => {
                   <div className="timeline-connector-glow"></div>
                 </div>
 
-                {/* Floating Icon */}
-                <div className="timeline-floating-icon">
-                  <div className="timeline-icon-placeholder" style={{ background: `linear-gradient(135deg, ${getCategoryColor(item.category)} 0%, var(--accent-secondary) 100%)` }}>
-                    {getCompanyLogo(item.company) ? (
-                      <img 
-                        src={getCompanyLogo(item.company)} 
-                        alt={`${item.company} logo`}
-                        className="timeline-company-logo"
-                      />
-                    ) : (
-                      <span className="timeline-icon-text">{item.icon}</span>
-                    )}
-                  </div>
-                  <div className="timeline-icon-glow"></div>
-                </div>
-
                 {/* Card content */}
                 <div className="timeline-card-content">
+                  {/* Company logo as faded background in top-right corner */}
+                  {(getCompanyLogo(item.company) || item.icon) && (
+                    <div 
+                      className={`timeline-corner-triangle ${getCompanyLogo(item.company) ? 'has-logo' : ''}`}
+                      style={getCompanyLogo(item.company) 
+                        ? { backgroundImage: `url(${getCompanyLogo(item.company)})` } 
+                        : { background: `linear-gradient(135deg, ${getCategoryColor(item.category)} 0%, var(--accent-secondary) 100%)` }
+                      }
+                    >
+                      {!getCompanyLogo(item.company) && (
+                        <span className="timeline-corner-icon">{item.icon}</span>
+                      )}
+                    </div>
+                  )}
                   {/* Card details */}
                   <div className="timeline-card-details">
                     <div className="timeline-year">{item.year}</div>
@@ -150,23 +145,6 @@ const Timeline = () => {
                         <div className="technologies-list">
                           {item.technologies.map((tech, i) => (
                             <span key={i} className="technology-tag">{tech}</span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Achievements */}
-                    {item.achievements && item.achievements.length > 0 && (
-                      <div className="timeline-achievements">
-                        <div className="achievements-label">
-                          {item.category === 'education' ? 'Highlights:' : 'Key Achievements:'}
-                        </div>
-                        <div className="achievements-list">
-                          {item.achievements.map((achievement, i) => (
-                            <span key={i} className="achievement-badge">
-                              <span className="achievement-icon">🏆</span>
-                              {achievement}
-                            </span>
                           ))}
                         </div>
                       </div>

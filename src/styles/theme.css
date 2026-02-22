@@ -7,8 +7,8 @@
   --text-primary: #222222;
   --text-secondary: #666666;
   --text-muted: #888888;
-  --accent-primary: #AA5149;
-  --accent-secondary: #934741;
+  --accent-primary: #1e40af;
+  --accent-secondary: #2563eb;
   --border-color: #dee2e6;
   --shadow-light: rgba(0, 0, 0, 0.08);
   --shadow-medium: rgba(0, 0, 0, 0.15);
@@ -20,9 +20,9 @@
   --toggle-thumb-bg: #ffffff;
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #AA5149 0%, #934741 100%);
+  --gradient-primary: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
   --gradient-secondary: linear-gradient(135deg, #64748b 0%, #475569 100%);
-  --gradient-accent: linear-gradient(135deg, #C65E54 0%, #AA5149 100%);
+  --gradient-accent: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
   
   /* Modern Section Colors (Light Theme) */
   --modern-bg: #f8f9fa;
@@ -30,13 +30,13 @@
   --modern-card-hover: #f0f2f5;
   --modern-text-primary: #1a1a1a;
   --modern-text-secondary: #4a5568;
-  --modern-accent: #AA5149;
-  --modern-accent-light: rgba(170, 81, 73, 0.1);
+  --modern-accent: #1e40af;
+  --modern-accent-light: rgba(30, 64, 175, 0.1);
   --modern-border: #e2e8f0;
   --modern-shadow: rgba(0, 0, 0, 0.1);
-  --modern-glow: rgba(170, 81, 73, 0.15);
-  --modern-glow-strong: rgba(170, 81, 73, 0.25);
-  --modern-glow-subtle: rgba(170, 81, 73, 0.08);
+  --modern-glow: rgba(30, 64, 175, 0.15);
+  --modern-glow-strong: rgba(30, 64, 175, 0.25);
+  --modern-glow-subtle: rgba(30, 64, 175, 0.08);
   
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -49,45 +49,45 @@
   --smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Theme */
+/* Dark Theme - Soft slate */
 [data-theme="dark"] {
-  /* Colors */
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2d2d2d;
-  --bg-tertiary: #404040;
-  --text-primary: #ffffff;
-  --text-secondary: #cccccc;
-  --text-muted: #999999;
-  --accent-primary: #C65E54;
-  --accent-secondary: #D67066;
-  --border-color: #404040;
-  --shadow-light: rgba(0, 0, 0, 0.3);
+  /* Colors - Soft dark palette */
+  --bg-primary: #18181b;
+  --bg-secondary: #27272a;
+  --bg-tertiary: #3f3f46;
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #60a5fa;
+  --border-color: #3f3f46;
+  --shadow-light: rgba(0, 0, 0, 0.4);
   --shadow-medium: rgba(0, 0, 0, 0.5);
   --shadow-heavy: rgba(0, 0, 0, 0.7);
   
   /* Theme Toggle */
-  --toggle-bg: #404040;
-  --toggle-border: #666666;
-  --toggle-thumb-bg: #ffffff;
+  --toggle-bg: #3f3f46;
+  --toggle-border: #52525b;
+  --toggle-thumb-bg: #3b82f6;
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #C65E54 0%, #AA5149 100%);
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   --gradient-secondary: linear-gradient(135deg, #64748b 0%, #475569 100%);
-  --gradient-accent: linear-gradient(135deg, #D67066 0%, #C65E54 100%);
+  --gradient-accent: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
   
   /* Modern Section Colors (Dark Theme) */
-  --modern-bg: #11121a;
-  --modern-card-bg: #23243a;
-  --modern-card-hover: #2a2b42;
-  --modern-text-primary: #ffffff;
-  --modern-text-secondary: #e0dde8;
-  --modern-accent: #C65E54;
-  --modern-accent-light: rgba(198, 94, 84, 0.1);
-  --modern-border: #2a2b42;
-  --modern-shadow: rgba(0, 0, 0, 0.3);
-  --modern-glow: rgba(198, 94, 84, 0.3);
-  --modern-glow-strong: rgba(198, 94, 84, 0.4);
-  --modern-glow-subtle: rgba(198, 94, 84, 0.15);
+  --modern-bg: #18181b;
+  --modern-card-bg: #27272a;
+  --modern-card-hover: #3f3f46;
+  --modern-text-primary: #fafafa;
+  --modern-text-secondary: #a1a1aa;
+  --modern-accent: #3b82f6;
+  --modern-accent-light: rgba(59, 130, 246, 0.15);
+  --modern-border: #3f3f46;
+  --modern-shadow: rgba(0, 0, 0, 0.5);
+  --modern-glow: rgba(59, 130, 246, 0.25);
+  --modern-glow-strong: rgba(59, 130, 246, 0.35);
+  --modern-glow-subtle: rgba(59, 130, 246, 0.1);
 }
 
 /* Global Styles */
@@ -104,7 +104,7 @@ button, a, .btn, .nav-list button, .social-link {
   transition: all var(--transition-normal) var(--smooth);
 }
 
-button:hover, a:hover, .btn:hover, .nav-list button:hover, .social-link:hover {
+button:hover, a:hover, .btn:hover, .nav-list button:hover {
   transform: translateY(-2px);
 }
 
@@ -121,9 +121,7 @@ button:hover, a:hover, .btn:hover, .nav-list button:hover, .social-link:hover {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;

@@ -18,13 +18,36 @@
   transform: translateY(20px);
   border-radius: 50%;
   padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .social-link:hover {
   color: var(--text-primary);
-  transform: translateY(-3px) scale(1.15);
-  background: var(--bg-secondary);
-  box-shadow: 0 8px 25px var(--shadow-medium);
+  transform: translateY(-3px) scale(1.1);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.social-link[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 0.35rem 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 100;
 }
 
 .social-icon {
@@ -54,8 +77,13 @@
 }
 
 .social-links-large .social-icon {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+}
+
+.social-links-large .social-link {
+  padding: 0.6rem;
 }
 
 
@@ -117,12 +145,14 @@
 
 /* Dark theme specific adjustments */
 [data-theme="dark"] .social-link {
-  color: #ffffff;
+  color: #fafafa;
+  background: rgba(39, 39, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .social-link:hover {
-  color: #ffffff;
-  background: var(--bg-tertiary);
+  color: #fafafa;
+  background: rgba(63, 63, 70, 0.7);
 }
 
 /* Light theme specific adjustments */

@@ -62,6 +62,7 @@
   },
   "hero": {
     "name": "Darshan Vijayaraghavan",
+    "summary": "Grad student at CU Boulder building production-grade systems. Full-stack, cloud & AI.",
     "greeting": "Hello, I'm",
     "waveEmoji": "👋",
     "roles": [
@@ -178,20 +179,35 @@
   "social": {
     "links": [
       {
-        "name": "LinkedIn",
-        "url": "https://linkedin.com/in/darshan-vijay",
-        "icon": "linkedin"
-      },
-      {
         "name": "GitHub",
         "url": "https://github.com/darshan-vijay",
         "icon": "github"
       },
       {
-        "name": "Download Resume",
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/darshan-vijay",
+        "icon": "linkedin"
+      },
+      {
+        "name": "LeetCode",
+        "url": "https://leetcode.com/u/darshan-vijay",
+        "icon": "leetcode"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://youtube.com/@darshanvijay",
+        "icon": "youtube"
+      },
+      {
+        "name": "Blog",
+        "url": "#",
+        "icon": "blog"
+      },
+      {
+        "name": "View Resume",
         "url": "/Darshan_Vijayaraghavan_Resume.pdf",
         "icon": "resume",
-        "download": true
+        "download": false
       }
     ]
   },
@@ -213,7 +229,7 @@
       "technologies": ["React.js", "Node.js", "NoSQL", "Redis", "RabbitMQ", "WebSocket", "Docker", "Kubernetes", "Terraform"],
       "image": "study",
       "github": "https://github.com/darshan-vijay/Study-group-manager",
-      "live": "https://youtu.be/hWxHUJqYAns?feature=shared",
+      "live": "https://youtu.be/IWWuGS84dyw?si=xLsRnJ8msZ0cIv2V",
       "category": "Full-Stack & Cloud"
     },
     {

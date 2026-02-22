@@ -1,11 +1,21 @@
 import { useState, useEffect } from 'react';
+import { LuHouse, LuUser, LuFolderOpen, LuCode, LuClock, LuMail } from 'react-icons/lu';
 import ThemeToggle from './ThemeToggle';
-import SocialLinks from './SocialLinks';
 import '../styles/Header.css';
+
+const NAV_ICONS = {
+  home: LuHouse,
+  about: LuUser,
+  projects: LuFolderOpen,
+  skills: LuCode,
+  timeline: LuClock,
+  contact: LuMail,
+};
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navData, setNavData] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     fetch('/portfolioData.json')
@@ -13,6 +23,16 @@ const Header = () => {
       .then((data) => {
         setNavData(data.navigation);
       });
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const toggleMenu = () => {
@@ -35,39 +55,52 @@ const Header = () => {
   if (!navData) return null;
 
   return (
-    <header className="header">
-      <div className="header-container">
-        <div className="logo" onClick={scrollToTop}>
-          <h2>{navData.logo}</h2>
-        </div>
-        
-        <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-          <ul className="nav-list">
-            {navData.menuItems.map((item) => (
-              <li key={item.id}>
-                <button onClick={() => scrollToSection(item.id)}>
-                  {item.label}
-                </button>
-              </li>
-            ))}
-            <li className="social-links-container">
-              <SocialLinks size="medium" />
-            </li>
+    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
+      <div className="header-surface">
+        <div className="header-container">
+          <div className="logo" onClick={scrollToTop}>
+            <h2>{navData.logo}</h2>
+          </div>
 
-          </ul>
-        </nav>
+          <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
+            <ul className="nav-list">
+              {navData.menuItems.map((item) => {
+                const Icon = NAV_ICONS[item.id];
+                return (
+                  <li key={item.id}>
+                    <button
+                      onClick={() => scrollToSection(item.id)}
+                      className="nav-btn-with-tooltip"
+                      data-tooltip={item.label}
+                      aria-label={item.label}
+                    >
+                      {Icon ? <Icon size={20} /> : item.label}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="nav-footer">
+              <ThemeToggle />
+            </div>
+          </nav>
 
-        <div className="header-controls">
-          <ThemeToggle />
-          <button 
-            className={`hamburger ${isMenuOpen ? 'active' : ''}`}
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <div className="header-bottom">
+            <ThemeToggle />
+          </div>
+
+          <div className="header-mobile-controls">
+            <ThemeToggle />
+            <button
+              className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
       </div>
     </header>
