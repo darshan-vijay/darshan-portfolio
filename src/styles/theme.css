@@ -1,13 +1,13 @@
 /* Light Theme (Default) */
 :root {
-  /* Colors */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --bg-tertiary: #e9ecef;
+  /* Colors - soft off-white to reduce eye strain */
+  --bg-primary: #f5f5f4;
+  --bg-secondary: #e7e5e4;
+  --bg-tertiary: #d6d3d1;
   --text-primary: #222222;
   --text-secondary: #666666;
   --text-muted: #888888;
-  --accent-primary: #1e40af;
+  --accent-primary: #1d4ed8;
   --accent-secondary: #2563eb;
   --border-color: #dee2e6;
   --shadow-light: rgba(0, 0, 0, 0.08);
@@ -17,26 +17,26 @@
   /* Theme Toggle */
   --toggle-bg: #e9ecef;
   --toggle-border: #dee2e6;
-  --toggle-thumb-bg: #ffffff;
+  --toggle-thumb-bg: #fafaf9;
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  --gradient-primary: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
   --gradient-secondary: linear-gradient(135deg, #64748b 0%, #475569 100%);
-  --gradient-accent: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  --gradient-accent: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   
   /* Modern Section Colors (Light Theme) */
-  --modern-bg: #f8f9fa;
-  --modern-card-bg: #ffffff;
-  --modern-card-hover: #f0f2f5;
+  --modern-bg: #f5f5f4;
+  --modern-card-bg: #fafaf9;
+  --modern-card-hover: #e7e5e4;
   --modern-text-primary: #1a1a1a;
   --modern-text-secondary: #4a5568;
-  --modern-accent: #1e40af;
-  --modern-accent-light: rgba(30, 64, 175, 0.1);
+  --modern-accent: #1d4ed8;
+  --modern-accent-light: rgba(29, 78, 216, 0.1);
   --modern-border: #e2e8f0;
   --modern-shadow: rgba(0, 0, 0, 0.1);
-  --modern-glow: rgba(30, 64, 175, 0.15);
-  --modern-glow-strong: rgba(30, 64, 175, 0.25);
-  --modern-glow-subtle: rgba(30, 64, 175, 0.08);
+  --modern-glow: rgba(29, 78, 216, 0.15);
+  --modern-glow-strong: rgba(29, 78, 216, 0.25);
+  --modern-glow-subtle: rgba(29, 78, 216, 0.08);
   
   /* Transitions */
   --transition-fast: 0.2s ease;

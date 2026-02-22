@@ -25,7 +25,7 @@
 }
 
 .social-link:hover {
-  color: var(--text-primary);
+  color: var(--accent-primary);
   transform: translateY(-3px) scale(1.1);
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(14px);
@@ -151,7 +151,7 @@
 }
 
 [data-theme="dark"] .social-link:hover {
-  color: #fafafa;
+  color: var(--accent-secondary);
   background: rgba(63, 63, 70, 0.7);
 }
 
@@ -161,6 +161,6 @@
 }
 
 [data-theme="light"] .social-link:hover {
-  color: #333333;
+  color: var(--accent-primary);
   background: var(--bg-secondary);
 } 

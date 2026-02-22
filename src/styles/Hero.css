@@ -185,8 +185,8 @@
 
 .hero-image-container {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 360px;
+  height: 360px;
   margin: 0 auto;
   flex-shrink: 0;
 }
@@ -362,8 +362,8 @@
   }
   
   .hero-image-container {
-    width: 240px;
-    height: 240px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
   }
 }
@@ -400,8 +400,8 @@
   }
   
   .hero-image-container {
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
     margin: 0 auto;
   }
   
@@ -434,8 +434,8 @@
   }
   
   .hero-image-container {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
     margin: 0 auto;
   }
 } 
