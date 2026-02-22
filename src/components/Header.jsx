@@ -55,16 +55,20 @@ const Header = () => {
     if (location.pathname !== '/') return;
 
     const updateActiveSection = () => {
-      const triggerY = window.innerHeight * 0.35; // Section active when trigger point (35% from top) is inside it
+      const scrollY = window.scrollY;
+      if (scrollY < 100) {
+        setActiveSection('home');
+        return;
+      }
 
+      const triggerOffset = 120;
       let current = 'home';
-      for (let i = SECTION_IDS.length - 1; i >= 0; i--) {
+      for (let i = 0; i < SECTION_IDS.length; i++) {
         const el = document.getElementById(SECTION_IDS[i]);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (rect.top <= triggerY && rect.bottom > triggerY) {
+          if (rect.top <= triggerOffset) {
             current = SECTION_IDS[i];
-            break;
           }
         }
       }
@@ -72,8 +76,12 @@ const Header = () => {
     };
 
     updateActiveSection();
+    const raf = requestAnimationFrame(() => requestAnimationFrame(updateActiveSection));
     window.addEventListener('scroll', updateActiveSection, { passive: true });
-    return () => window.removeEventListener('scroll', updateActiveSection);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', updateActiveSection);
+    };
   }, [location.pathname]);
 
   const toggleMenu = () => {
