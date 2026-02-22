@@ -1,0 +1,144 @@
+.blog-post-section {
+  min-height: 100vh;
+  padding: 6rem 1.5rem 4rem;
+  background: var(--bg-primary);
+}
+
+.blog-post-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.blog-post-loading {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 4rem;
+}
+
+.blog-post-error {
+  color: #dc2626;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post-header {
+  margin-bottom: 2rem;
+}
+
+.blog-post-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.blog-post-date {
+  font-weight: 500;
+}
+
+.blog-post-read-time::before {
+  content: '·';
+  margin-right: 0.5rem;
+}
+
+.blog-post-authors {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+}
+
+.blog-post-title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 800;
+  color: var(--accent-primary);
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.blog-post-body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+}
+
+.blog-post-body .md-h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+  color: var(--text-primary);
+}
+
+.blog-post-body .md-h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2rem 0 0.75rem;
+  color: var(--text-primary);
+}
+
+.blog-post-body .md-h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--text-primary);
+}
+
+.blog-post-body .md-p {
+  margin: 0 0 1.25rem;
+  color: var(--text-secondary);
+}
+
+.blog-post-body .md-ul,
+.blog-post-body .md-ol {
+  margin: 0 0 1.25rem 1.5rem;
+  color: var(--text-secondary);
+}
+
+.blog-post-body .md-li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-post-body .md-blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--accent-primary);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-radius: 0 8px 8px 0;
+}
+
+.blog-post-body .md-inline-code {
+  padding: 0.15rem 0.4rem;
+  font-size: 0.9em;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+.blog-post-body .md-pre {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+.blog-post-body .md-code-block {
+  font-size: 0.9rem;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+.blog-post-image-wrap {
+  display: block;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.blog-post-image-wrap img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

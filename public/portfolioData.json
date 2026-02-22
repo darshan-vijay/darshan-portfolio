@@ -43,6 +43,10 @@
         "label": "About"
       },
       {
+        "id": "timeline",
+        "label": "Timeline"
+      },
+      {
         "id": "projects",
         "label": "Projects"
       },
@@ -51,12 +55,12 @@
         "label": "Skills"
       },
       {
-        "id": "timeline",
-        "label": "Timeline"
-      },
-      {
         "id": "contact",
         "label": "Contact"
+      },
+      {
+        "id": "blogs",
+        "label": "Blog"
       }
     ]
   },

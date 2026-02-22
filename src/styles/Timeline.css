@@ -42,7 +42,7 @@
 
 .timeline-header h2 {
   color: var(--accent-primary);
-  font-size: 2.8rem;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 15px;
   background-clip: text;
@@ -457,7 +457,7 @@
   }
   
   .timeline-header h2 {
-    font-size: 2.2rem;
+    font-size: clamp(2.25rem, 6vw, 3.25rem);
   }
   
   .timeline-header p {
@@ -518,7 +518,7 @@
   }
   
   .timeline-header h2 {
-    font-size: 2rem;
+    font-size: clamp(2rem, 6vw, 3rem);
   }
   
   .timeline-scroll-container {

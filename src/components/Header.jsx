@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { LuHouse, LuUser, LuFolderOpen, LuCode, LuClock, LuMail } from 'react-icons/lu';
+import { Link, useLocation } from 'react-router-dom';
+import { LuHouse, LuUser, LuFolderOpen, LuCode, LuClock, LuNewspaper, LuMail } from 'react-icons/lu';
 import ThemeToggle from './ThemeToggle';
 import '../styles/Header.css';
 
@@ -9,6 +10,7 @@ const NAV_ICONS = {
   projects: LuFolderOpen,
   skills: LuCode,
   timeline: LuClock,
+  blogs: LuNewspaper,
   contact: LuMail,
 };
 
@@ -16,6 +18,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navData, setNavData] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     fetch('/portfolioData.json')
@@ -58,18 +61,50 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
       <div className="header-surface">
         <div className="header-container">
-          <div className="logo" onClick={scrollToTop}>
+          <Link to="/" className="logo" onClick={scrollToTop}>
             <h2>{navData.logo}</h2>
-          </div>
+          </Link>
 
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <ul className="nav-list">
               {navData.menuItems.map((item) => {
                 const Icon = NAV_ICONS[item.id];
+                const isBlog = item.id === 'blogs';
+                const isOnHome = location.pathname === '/';
+                if (isBlog) {
+                  return (
+                    <li key={item.id}>
+                      <Link
+                        to="/blog"
+                        className="nav-btn-with-tooltip"
+                        data-tooltip={item.label}
+                        aria-label={item.label}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {Icon ? <Icon size={20} /> : item.label}
+                      </Link>
+                    </li>
+                  );
+                }
+                if (!isOnHome && item.id === 'home') {
+                  return (
+                    <li key={item.id}>
+                      <Link
+                        to="/"
+                        className="nav-btn-with-tooltip"
+                        data-tooltip={item.label}
+                        aria-label={item.label}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {Icon ? <Icon size={20} /> : item.label}
+                      </Link>
+                    </li>
+                  );
+                }
                 return (
                   <li key={item.id}>
                     <button
-                      onClick={() => scrollToSection(item.id)}
+                      onClick={() => isOnHome ? scrollToSection(item.id) : (window.location.href = `/#${item.id}`)}
                       className="nav-btn-with-tooltip"
                       data-tooltip={item.label}
                       aria-label={item.label}

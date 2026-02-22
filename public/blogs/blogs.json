@@ -1,0 +1,26 @@
+{
+  "title": "Blog",
+  "subtitle": "Thoughts & insights",
+  "posts": [
+    {
+      "slug": "gitops-demystified",
+      "title": "GitOps Demystified",
+      "excerpt": "Why GitOps is gaining attention in Continuous Delivery—declarative IaC, Git as source of truth, and pull-based deployments explained.",
+      "thumbnail": "hero-placeholder.svg",
+      "mdFile": "gitops-demystified.md",
+      "datePublished": "2025-02-20",
+      "readTime": 8,
+      "authors": ["Darshan Vijayaraghavan"]
+    },
+    {
+      "slug": "building-scalable-systems",
+      "title": "Building Scalable Systems at Scale",
+      "excerpt": "Thoughts on distributed systems, cloud-native architecture, and what I've learned along the way.",
+      "thumbnail": "hero-placeholder.svg",
+      "mdFile": "building-scalable-systems.md",
+      "datePublished": "2025-02-15",
+      "readTime": 5,
+      "authors": ["Darshan Vijayaraghavan"]
+    }
+  ]
+}
