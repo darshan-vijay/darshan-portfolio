@@ -75,11 +75,16 @@
   align-items: center;
   gap: 0.5rem;
   min-height: 2rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .role-text {
   color: var(--accent-primary);
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .cursor {
@@ -369,6 +374,10 @@
 }
 
 @media (max-width: 1000px) {
+  .hero {
+    padding-top: 0;
+  }
+  
   .hero-container {
     padding: 0 1rem;
   }
@@ -377,7 +386,7 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     min-height: 70vh;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   
   .hero-text {
@@ -392,6 +401,12 @@
   .hero-role {
     justify-content: center;
     text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .role-text {
+    white-space: normal;
+    word-break: break-word;
   }
   
   .hero-summary {
@@ -416,11 +431,22 @@
 
 @media (max-width: 480px) {
   .hero-container {
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
   
   .hero-content {
-    padding: 0.5rem 0;
+    padding: 0.25rem 0;
+  }
+  
+  .hero-role {
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+  }
+  
+  .role-text {
+    white-space: normal;
+    word-break: break-word;
+    max-width: 100%;
   }
   
   .hero-title {

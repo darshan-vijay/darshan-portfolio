@@ -19,10 +19,17 @@ function AppContent() {
   useEffect(() => {
     const scrollToId = location.state?.scrollTo || (location.hash && location.hash.slice(1));
     if (scrollToId && location.pathname === '/') {
-      const el = document.getElementById(scrollToId);
-      if (el) {
-        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
+      const scrollToEl = () => {
+        const el = document.getElementById(scrollToId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTimeout(scrollToEl, 150);
+        });
+      });
     }
   }, [location.pathname, location.state, location.hash]);
 

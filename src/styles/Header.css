@@ -111,6 +111,15 @@
   opacity: 0.15;
 }
 
+/* Active/current nav item highlight */
+.nav-btn-with-tooltip.nav-active {
+  color: var(--accent-primary);
+}
+
+.nav-btn-with-tooltip.nav-active::before {
+  opacity: 0.2;
+}
+
 /* Tooltip on hover */
 .nav-btn-with-tooltip::after {
   content: attr(data-tooltip);
@@ -207,16 +216,29 @@
     min-height: 56px;
   }
 
+  .header-surface .logo {
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .header-surface .logo h2 {
+    line-height: 1;
+  }
+
   .header-container {
     flex-direction: row;
     width: 100%;
     padding: 0 0.5rem;
     justify-content: space-between;
+    align-items: center;
     gap: 0;
+    min-height: 44px;
   }
 
   .logo {
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
   }
 
   .logo h2 {
@@ -233,12 +255,15 @@
     gap: 0.5rem;
   }
 
-  /* Nav pill on the RIGHT side when open */
-  .nav {
-    position: fixed;
+  /* Nav pill on the RIGHT side, vertically centered - fixed to viewport (rendered via portal on mobile) */
+  .header .nav,
+  body > .nav {
+    position: fixed !important;
     top: 50%;
     right: 1rem;
-    transform: translateY(-50%) translateX(120%);
+    left: auto;
+    bottom: auto;
+    transform: translate(200%, -50%);
     width: 72px;
     flex: none;
     background: rgba(255, 255, 255, 0.6);
@@ -259,7 +284,7 @@
   }
 
   .nav.nav-open {
-    transform: translateY(-50%) translateX(0);
+    transform: translate(0, -50%);
   }
 
   .nav-list {

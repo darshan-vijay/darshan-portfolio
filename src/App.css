@@ -12,16 +12,39 @@ main {
   width: 100%;
 }
 
+/* Scroll margin for anchor links - accounts for fixed header */
+#home, #about, #timeline, #projects, #skills, #contact {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 1000px) {
+  #home, #about, #timeline, #projects, #skills, #contact {
+    scroll-margin-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  #home, #about, #timeline, #projects, #skills, #contact {
+    scroll-margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  #home, #about, #timeline, #projects, #skills, #contact {
+    scroll-margin-top: 56px;
+  }
+}
+
 @media (max-width: 1000px) {
   main {
     padding-left: 0;
-    padding-top: 70px; /* Account for horizontal header on mobile */
+    padding-top: 56px; /* Match header height, minimal top padding */
   }
 }
 
 @media (max-width: 768px) {
   main {
-    padding-top: 60px;
+    padding-top: 52px;
   }
   
   /* Improve touch targets and prevent zoom on input focus */

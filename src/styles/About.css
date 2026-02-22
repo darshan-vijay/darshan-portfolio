@@ -42,21 +42,40 @@
 
 @media (max-width: 768px) {
   .about {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
   
   .about-text {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   
   .about-text p {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Show fewer paragraphs on mobile - hide 4th and 5th */
+  .about-text p:nth-child(n+4) {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .about {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
+  }
+  
+  .about-text {
+    padding: 1rem;
+  }
+  
+  .about-text p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  
+  /* Show only first 2 paragraphs on small mobile */
+  .about-text p:nth-child(n+3) {
+    display: none;
   }
 }
