@@ -314,13 +314,13 @@
   font-weight: 500;
 }
 
-/* Minimal Send Message button */
+/* Send Message button - primary color */
 .contact-submit-btn {
   padding: 8px 20px;
-  background: transparent;
-  border: 1px solid var(--modern-border);
+  background: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
   border-radius: 8px;
-  color: var(--modern-text-primary);
+  color: white;
   font-weight: 500;
   font-size: 0.9rem;
   cursor: pointer;
@@ -328,8 +328,9 @@
 }
 
 .contact-submit-btn:hover:not(:disabled) {
-  border-color: var(--modern-accent);
-  color: var(--modern-accent);
+  background: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  color: white;
 }
 
 .contact-submit-btn:disabled {

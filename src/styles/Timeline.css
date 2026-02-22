@@ -32,6 +32,11 @@
   --category-badge-shadow: rgba(0, 0, 0, 0.15);
 }
 
+/* Light mode: grey triangle (icons only), photos/logos stay visible */
+[data-theme="light"] .timeline-corner-triangle:not(.has-logo) {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%) !important;
+}
+
 .timeline-header {
   text-align: center;
   margin-bottom: 80px;
