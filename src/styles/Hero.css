@@ -1,5 +1,6 @@
 .hero {
   min-height: 100vh;
+  min-height: 100dvh; /* Matches visible viewport on mobile (address bar) */
   padding-top: 20px;
   display: flex;
   align-items: center;
@@ -376,6 +377,8 @@
 @media (max-width: 1000px) {
   .hero {
     padding-top: 0;
+    align-items: flex-start; /* Start content higher so image fits on first load */
+    padding-top: 0.5rem;
   }
   
   .hero-container {
@@ -384,9 +387,9 @@
   
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    min-height: 70vh;
-    padding: 0.5rem 0;
+    gap: 1.75rem;
+    min-height: auto;
+    padding: 0.75rem 0;
   }
   
   .hero-text {
@@ -431,11 +434,13 @@
 
 @media (max-width: 480px) {
   .hero-container {
+    align-self: center;
     padding: 0 0.75rem;
   }
   
   .hero-content {
-    padding: 0.25rem 0;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
   }
   
   .hero-role {
@@ -452,11 +457,13 @@
   .hero-title {
     font-size: 2.3rem;
     text-align: center;
+    margin-bottom: 1rem;
   }
   
   .hero-summary {
     font-size: 0.9rem;
     text-align: center;
+    margin-bottom: 1rem;
   }
   
   .hero-image-container {

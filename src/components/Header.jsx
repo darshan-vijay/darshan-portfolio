@@ -53,21 +53,27 @@ const Header = () => {
 
   useEffect(() => {
     if (location.pathname !== '/') return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id || 'home');
+
+    const updateActiveSection = () => {
+      const triggerY = window.innerHeight * 0.35; // Section active when trigger point (35% from top) is inside it
+
+      let current = 'home';
+      for (let i = SECTION_IDS.length - 1; i >= 0; i--) {
+        const el = document.getElementById(SECTION_IDS[i]);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= triggerY && rect.bottom > triggerY) {
+            current = SECTION_IDS[i];
+            break;
           }
-        });
-      },
-      { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
-    );
-    SECTION_IDS.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+        }
+      }
+      setActiveSection(current);
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    return () => window.removeEventListener('scroll', updateActiveSection);
   }, [location.pathname]);
 
   const toggleMenu = () => {

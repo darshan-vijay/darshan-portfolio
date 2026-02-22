@@ -1,5 +1,6 @@
 .App {
   min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport: matches visible height on mobile (address bar) */
   /* Prevent horizontal scroll on mobile */
   overflow-x: hidden;
   /* Improve touch scrolling */
@@ -19,32 +20,38 @@ main {
 
 @media (max-width: 1000px) {
   #home, #about, #timeline, #projects, #skills, #contact {
-    scroll-margin-top: 70px;
+    scroll-margin-top: 48px;
   }
 }
 
 @media (max-width: 768px) {
   #home, #about, #timeline, #projects, #skills, #contact {
-    scroll-margin-top: 60px;
+    scroll-margin-top: 44px;
   }
 }
 
 @media (max-width: 480px) {
   #home, #about, #timeline, #projects, #skills, #contact {
-    scroll-margin-top: 56px;
+    scroll-margin-top: 40px;
   }
 }
 
 @media (max-width: 1000px) {
   main {
     padding-left: 0;
-    padding-top: 56px; /* Match header height, minimal top padding */
+    padding-top: 48px; /* Minimal clearance for fixed header */
   }
 }
 
 @media (max-width: 768px) {
   main {
-    padding-top: 52px;
+    padding-top: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 40px;
   }
   
   /* Improve touch targets and prevent zoom on input focus */

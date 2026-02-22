@@ -1,5 +1,6 @@
 .blog-section {
   min-height: 100vh;
+  min-height: 100dvh;
   padding: 6rem 1.5rem 4rem;
   background: var(--bg-primary);
 }
