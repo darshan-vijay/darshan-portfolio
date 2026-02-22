@@ -101,16 +101,32 @@ const Header = () => {
                     </li>
                   );
                 }
+                if (isOnHome) {
+                  return (
+                    <li key={item.id}>
+                      <button
+                        onClick={() => scrollToSection(item.id)}
+                        className="nav-btn-with-tooltip"
+                        data-tooltip={item.label}
+                        aria-label={item.label}
+                      >
+                        {Icon ? <Icon size={20} /> : item.label}
+                      </button>
+                    </li>
+                  );
+                }
                 return (
                   <li key={item.id}>
-                    <button
-                      onClick={() => isOnHome ? scrollToSection(item.id) : (window.location.href = `/#${item.id}`)}
+                    <Link
+                      to="/"
+                      state={{ scrollTo: item.id }}
                       className="nav-btn-with-tooltip"
                       data-tooltip={item.label}
                       aria-label={item.label}
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       {Icon ? <Icon size={20} /> : item.label}
-                    </button>
+                    </Link>
                   </li>
                 );
               })}

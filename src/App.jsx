@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -12,10 +13,21 @@ import Contact from './components/Contact';
 import BackToTop from './components/ScrollProgress';
 import './App.css';
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollToId = location.state?.scrollTo || (location.hash && location.hash.slice(1));
+    if (scrollToId && location.pathname === '/') {
+      const el = document.getElementById(scrollToId);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+      }
+    }
+  }, [location.pathname, location.state, location.hash]);
+
   return (
-    <ThemeProvider>
-      <div className="App">
+    <div className="App">
         <Header />
         <main>
           <Routes>
@@ -38,6 +50,13 @@ function App() {
         </main>
         <BackToTop />
       </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
     </ThemeProvider>
   );
 }

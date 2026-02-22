@@ -150,7 +150,7 @@ const Timeline = () => {
                       </div>
                     )}
 
-                    {/* Details list - hidden by default, shown on hover */}
+                    {/* Details list - hover to view more info (commented out in CSS) */}
                     {item.details && item.details.length > 0 && (
                       <ul className="timeline-details">
                         {item.details.map((detail, i) => (

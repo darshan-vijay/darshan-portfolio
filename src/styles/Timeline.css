@@ -239,7 +239,7 @@ x
   filter: brightness(1.15);
 }
 
-/* Card Content - Compact by default, expand on hover */
+/* Card Content */
 .timeline-card-content {
   background: linear-gradient(145deg, var(--modern-card-bg) 0%, var(--modern-card-hover) 100%);
   border-radius: 16px;
@@ -257,14 +257,9 @@ x
   min-height: 320px;
 }
 
+/* Hover: lift, scale, shadow and border glow */
 .timeline-card-content:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 
-    0 25px 80px var(--modern-shadow),
-    0 10px 30px rgba(0, 0, 0, 0.1);
-  height: auto;
-  min-height: 300px;
-  max-height: auto;
+  transform: translateY(-8px) scale(1.06);
 }
 
 /* Category Badge */
@@ -290,7 +285,7 @@ x
   font-size: 0.9rem;
 }
 
-/* Card Details */
+/* Card Details - padding-top so title doesn't overlap logo triangle */
 .timeline-card-details {
   color: var(--modern-text-primary);
   display: flex;
@@ -299,12 +294,12 @@ x
   height: 100%;
   overflow: hidden;
   justify-content: flex-start;
-  padding-left: 0;
+  padding: 48px 0 0 0;
   position: relative;
   z-index: 2;
 }
 
-/* Hide details by default, show on hover */
+/* Hide details by default, show on hover - commented out
 .timeline-details {
   opacity: 0;
   max-height: 0;
@@ -312,11 +307,14 @@ x
   transition: all 0.3s ease;
   margin-top: 0;
 }
-
 .timeline-card-content:hover .timeline-details {
   opacity: 1;
   max-height: 300px;
   margin-top: 15px;
+}
+*/
+.timeline-details {
+  display: none;
 }
 
 /* Compact card styling */
@@ -336,9 +334,7 @@ x
   transition: opacity 0.3s ease;
 }
 
-.timeline-card-content:hover::after {
-  opacity: 0;
-}
+/* .timeline-card-content:hover::after { opacity: 0; } */
 
 .timeline-year {
   color: var(--modern-accent);
@@ -412,9 +408,7 @@ x
   overflow: hidden;
 }
 
-.timeline-card-content:hover .technologies-list {
-  max-height: none;
-}
+/* .timeline-card-content:hover .technologies-list { max-height: none; } */
 
 .technology-tag {
   background: var(--technology-bg);
