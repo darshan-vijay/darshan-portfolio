@@ -1,26 +1,24 @@
-# GitOps Demystified
-
 The term GitOps is now widely used in the world of Continuous Delivery (CD), but why is it gaining so much attention? Why is it making application management easier than ever before?
 
 ## Basics First
 
 ### What is Continuous Delivery?
 
-Continuous Delivery is the process of automatically deploying validated application code to your infrastructure. It's all about making deployments faster, safer, and more reliable.
+Continuous Delivery is the process of automatically deploying validated application code to your infrastructure. It’s all about making deployments faster, safer, and more reliable.
 
 ### What is Imperative Coding?
 
-The coding style where you provide instructions step by step to achieve the end goal. It's a procedural way of coding to manipulate the program's state using instructions.
+The coding style where you provide instructions step by step to achieve the end goal. It’s a procedural way of coding to manipulate the program’s state using instructions.
 
 ### What is Declarative Coding?
 
 The Code describes the end state of what should be achieved and does not bother to give instructions on how to achieve it.
 
-### So now let's define GitOps.
+### So now let’s define GitOps.
 
-GitOps is an approach where Infrastructure is defined as Code in a declarative way, with Git as the only source of truth, and the deployment is pull-based. It ensures that an application's cloud infrastructure is entirely reproducible with the state of the operation team's git repository.
+GitOps is an approach where Infrastructure is defined as Code in a declarative way, with Git as the only source of truth, and the deployment is pull-based. It ensures that an application’s cloud infrastructure is entirely reproducible with the state of the operation team’s git repository.
 
-Let's Dive Deeper,
+Let’s Dive Deeper,
 
 ### 1) Git as the only source of truth:
 
@@ -93,7 +91,7 @@ In a traditional pipeline, the CI/CD arrangement combines code assembling, testi
 
 **Characteristics:**
 
-- Cluster pulls changes, external systems don't push it.  
+- Cluster pulls changes, external systems don’t push it.  
 - Uses declarative configurations (K8s YAML)  
 - Git is the single source of truth  
 - Changes are auditable, revertible, and safer.  
@@ -107,7 +105,7 @@ In a traditional pipeline, the CI/CD arrangement combines code assembling, testi
 4. GitHub Actions (CI/CD)  
 5. Argo CD (GitOps delivery on GKE)  
 
-![GitOps Architecture for Quiz App](https://github.com/user-attachments/assets/d86de191-1a4d-47c1-811f-80474ad9eb6d)
+<img src="https://github.com/user-attachments/assets/d86de191-1a4d-47c1-811f-80474ad9eb6d" alt="GitOps Architecture for Quiz App" width="550" height="350">
 
 ## Tool suggestions
 
@@ -124,3 +122,7 @@ In a traditional pipeline, the CI/CD arrangement combines code assembling, testi
 Author: **Darshan Vijayaraghavan**
 
 ---
+
+
+
+

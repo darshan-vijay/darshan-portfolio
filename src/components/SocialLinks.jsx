@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { SiGithub, SiLinkedin, SiLeetcode, SiYoutube } from 'react-icons/si';
 import { HiOutlineDocumentText } from 'react-icons/hi2';
 import { LuNewspaper } from 'react-icons/lu';
@@ -33,31 +34,39 @@ const SocialLinks = ({ className = '', size = 'medium' }) => {
 
   if (!socialData) return null;
 
+  const isInternal = (link) => link.internal === true || (typeof link.url === 'string' && link.url.startsWith('/') && !link.url.startsWith('//'));
+
   return (
     <div className={`social-links ${className} social-links-${size}`}>
-      {socialData.links.map((link, index) => (
-        <a
-          key={link.name}
-          href={link.url}
-          target={link.download ? "_self" : "_blank"}
-          rel={link.download ? "" : "noopener noreferrer"}
-          className="social-link"
-          title={link.name}
-          data-tooltip={link.name}
-          aria-label={link.name}
-          download={link.download ? "Darshan_Vijayaraghavan_Resume.pdf" : undefined}
-          style={{
-            '--delay': `${index * 0.1}s`
-          }}
-        >
-          <div className="social-icon">
-            {(() => {
-              const Icon = ICON_MAP[link.icon];
-              return Icon ? <Icon /> : null;
-            })()}
-          </div>
-        </a>
-      ))}
+      {socialData.links.map((link, index) => {
+        const Icon = ICON_MAP[link.icon];
+        const iconEl = Icon ? <Icon /> : null;
+        const commonProps = {
+          key: link.name,
+          className: 'social-link',
+          title: link.name,
+          'data-tooltip': link.name,
+          'aria-label': link.name,
+          style: { '--delay': `${index * 0.1}s` }
+        };
+        if (isInternal(link)) {
+          return (
+            <Link to={link.url} {...commonProps}>
+              <div className="social-icon">{iconEl}</div>
+            </Link>
+          );
+        }
+        return (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            {...commonProps}
+          >
+            <div className="social-icon">{iconEl}</div>
+          </a>
+        );
+      })}
     </div>
   );
 };

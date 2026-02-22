@@ -52,7 +52,7 @@
 }
 
 .logo h2 {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
@@ -220,7 +220,7 @@
   }
 
   .logo h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .header-bottom {

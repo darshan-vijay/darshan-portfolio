@@ -194,24 +194,24 @@
       },
       {
         "name": "LeetCode",
-        "url": "https://leetcode.com/u/darshan-vijay",
+        "url": "https://leetcode.com/u/darshanvijay/",
         "icon": "leetcode"
       },
       {
         "name": "YouTube",
-        "url": "https://youtube.com/@darshanvijay",
+        "url": "https://www.youtube.com/@darshanvijayaraghavan4360",
         "icon": "youtube"
       },
       {
         "name": "Blog",
-        "url": "#",
-        "icon": "blog"
+        "url": "/blog",
+        "icon": "blog",
+        "internal": true
       },
       {
         "name": "View Resume",
-        "url": "/Darshan_Vijayaraghavan_Resume.pdf",
-        "icon": "resume",
-        "download": false
+        "url": "https://drive.google.com/file/d/1QqPvAAgsFZXkYZ521sYOsEO5MEfpU_DU/view?usp=drive_link",
+        "icon": "resume"
       }
     ]
   },
