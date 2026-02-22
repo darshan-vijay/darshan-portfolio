@@ -123,43 +123,39 @@ const Contact = () => {
             <h3>{contactData.subtitle}</h3>
             <p>{contactData.description}</p>
             
-            <div className="contact-details">
+            <ul className="contact-list">
               {contactData.details.map((detail, index) => (
-                <div key={index} className="contact-item">
-                  <span className={`contact-icon ${detail.icon}-icon`}>
+                <li key={index} className="contact-list-item">
+                  <span className="contact-list-icon">
                     {getIconSvg(detail.icon)}
                   </span>
-                  <div>
-                    <h4>{detail.label}</h4>
-                    {detail.icon === 'email' ? (
-                      <p>
-                        <button 
-                          className="contact-link"
-                          onClick={() => handleEmailClick(detail.value)}
-                          title="Click to open email client and copy email"
-                        >
-                          {detail.value}
-                        </button>
-                      </p>
-                    ) : detail.icon === 'phone' ? (
-                      <p>
-                        <button 
-                          className="contact-link"
-                          onClick={() => handlePhoneClick(detail.value)}
-                          title="Click to copy phone number"
-                        >
-                          {detail.value}
-                        </button>
-                      </p>
-                    ) : detail.url ? (
-                      <p><a href={detail.url} target="_blank" rel="noopener noreferrer">{detail.value}</a></p>
-                    ) : (
-                      <p>{detail.value}</p>
-                    )}
-                  </div>
-                </div>
+                  {detail.icon === 'email' ? (
+                    <a
+                      href={`mailto:${detail.value}`}
+                      className="contact-list-link"
+                      onClick={(e) => { handleEmailClick(detail.value); }}
+                    >
+                      {detail.value}
+                    </a>
+                  ) : detail.icon === 'phone' ? (
+                    <button
+                      type="button"
+                      className="contact-list-link contact-list-btn"
+                      onClick={() => handlePhoneClick(detail.value)}
+                      title="Click to copy"
+                    >
+                      {detail.value}
+                    </button>
+                  ) : detail.url ? (
+                    <a href={detail.url} target="_blank" rel="noopener noreferrer" className="contact-list-link">
+                      {detail.value}
+                    </a>
+                  ) : (
+                    <span className="contact-list-text">{detail.value}</span>
+                  )}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
