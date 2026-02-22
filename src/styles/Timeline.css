@@ -31,10 +31,15 @@
   --achievement-text: #1f2937;
   --category-badge-shadow: rgba(0, 0, 0, 0.15);
 }
-
+x
 /* Light mode: grey triangle (icons only), photos/logos stay visible */
 [data-theme="light"] .timeline-corner-triangle:not(.has-logo) {
-  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%) !important;
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%) !important;
+}
+/* Light mode: triangle with logo is grey (photos show on grey background) */
+[data-theme="light"] .timeline-corner-triangle.has-logo {
+  background-color: rgba(107, 114, 128, 0.9) !important;
+  box-shadow: 0 4px 20px rgba(107, 114, 128, 0.4);
 }
 
 .timeline-header {
