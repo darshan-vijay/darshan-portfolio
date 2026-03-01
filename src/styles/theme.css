@@ -38,6 +38,14 @@
   --modern-glow-strong: rgba(29, 78, 216, 0.25);
   --modern-glow-subtle: rgba(29, 78, 216, 0.08);
   
+  /* Loader (Light) */
+  --loader-bg: #1d4ed8;
+  --loader-bg-solid: #1e40af;
+  --loader-text: #ffffff;
+  --loader-wave-1: rgba(255, 255, 255, 0.3);
+  --loader-wave-2: rgba(255, 255, 255, 0.18);
+  --loader-wave-3: rgba(255, 255, 255, 0.1);
+  
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
@@ -88,6 +96,14 @@
   --modern-glow: rgba(59, 130, 246, 0.25);
   --modern-glow-strong: rgba(59, 130, 246, 0.35);
   --modern-glow-subtle: rgba(59, 130, 246, 0.1);
+  
+  /* Loader (Dark) - deeper blue to match dark theme */
+  --loader-bg: #1e40af;
+  --loader-bg-solid: #1e3a8a;
+  --loader-text: #ffffff;
+  --loader-wave-1: rgba(255, 255, 255, 0.2);
+  --loader-wave-2: rgba(255, 255, 255, 0.12);
+  --loader-wave-3: rgba(255, 255, 255, 0.08);
 }
 
 /* Global Styles */

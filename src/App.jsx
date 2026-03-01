@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
+import Loader from './components/Loader';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -61,8 +62,11 @@ function AppContent() {
 }
 
 function App() {
+  const [loaderDone, setLoaderDone] = useState(false);
+
   return (
     <ThemeProvider>
+      {!loaderDone && <Loader onComplete={() => setLoaderDone(true)} />}
       <AppContent />
     </ThemeProvider>
   );
