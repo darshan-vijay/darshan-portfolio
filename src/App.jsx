@@ -64,9 +64,19 @@ function AppContent() {
 function App() {
   const [loaderDone, setLoaderDone] = useState(false);
 
+  useEffect(() => {
+    document.body.style.overflow = loaderDone ? '' : 'hidden';
+    return () => { document.body.style.overflow = ''; };
+  }, [loaderDone]);
+
+  const handleLoaderComplete = () => {
+    setLoaderDone(true);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <ThemeProvider>
-      {!loaderDone && <Loader onComplete={() => setLoaderDone(true)} />}
+      {!loaderDone && <Loader onComplete={handleLoaderComplete} />}
       <AppContent />
     </ThemeProvider>
   );
