@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SiGithub, SiLinkedin, SiLeetcode, SiYoutube } from 'react-icons/si';
+import { SiGithub, SiLinkedin, SiYoutube } from 'react-icons/si';
 import { HiOutlineDocumentText } from 'react-icons/hi2';
 import { LuNewspaper } from 'react-icons/lu';
 import '../styles/SocialLinks.css';
@@ -8,7 +8,6 @@ import '../styles/SocialLinks.css';
 const ICON_MAP = {
   github: SiGithub,
   linkedin: SiLinkedin,
-  leetcode: SiLeetcode,
   youtube: SiYoutube,
   blog: LuNewspaper,
   resume: HiOutlineDocumentText,
